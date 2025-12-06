@@ -1,0 +1,92 @@
+.floor-map-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px);
+  overflow: auto;
+  background: #f5f5f5;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.svg-background-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floor-plan-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.floor-svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+  z-index: 2;
+}
+
+.room-overlay {
+  transition: all 0.2s ease;
+  pointer-events: all;
+}
+
+/* No hover effect - only show on click */
+.room-overlay:active {
+  fill: rgba(76, 175, 80, 0.2) !important;
+}
+
+.room-label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.room-label span {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .room-overlay {
+    fill: rgba(76, 175, 80, 0.2) !important;
+  }
+  
+  .room-label span {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+
