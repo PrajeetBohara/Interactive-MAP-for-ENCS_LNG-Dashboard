@@ -1,0 +1,92 @@
+.room-popup {
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  min-width: 250px;
+  max-width: 300px;
+  z-index: 1000;
+  animation: popupFadeIn 0.2s ease-out;
+  pointer-events: auto;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.popup-close:hover {
+  background-color: #f0f0f0;
+}
+
+.popup-title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.popup-description {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.popup-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-label {
+  font-weight: 500;
+  font-size: 13px;
+  color: #555;
+  min-width: 70px;
+}
+
+.detail-value {
+  font-size: 13px;
+  color: #333;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 11px;
+}
+
